@@ -19,7 +19,6 @@ const winningConditions = [
 
 
 async function tictactoe(message) {
-    console.log(message.content);
     if (message.content.startsWith('!tictactoe')) {
         addPlayer(message.author.username)
         if (players.length < 2) {
