@@ -20,7 +20,7 @@ const winningConditions = [
 
 async function tictactoe(message) {
     if (message.content.startsWith('!tictactoe')) {
-        addPlayer(message.author.username)
+        addPlayer(message.author.username, message)
         if (players.length < 2) {
             message.channel.send("Required 2 different player names.")
         }
@@ -107,8 +107,12 @@ async function tictactoe(message) {
     }
 }
 
-function addPlayer(playerName) {
-    players.push(playerName);
+function addPlayer(playerName, message) {
+    if (!players.includes(playerName)) {
+        players.push(playerName);
+    } else {
+        message.channel.send("You are already in the game, please wait for the second player to join!")
+    }
 }
 
 function checkWinner(mark) {
