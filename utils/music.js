@@ -91,7 +91,6 @@ async function music(message) {
 
         case 'pause':
             if (!connection) return message.channel.send("I am not connected to any voice channel!");
-            // console.log("Shums",player.state.status);
             if (player.state.status !== AudioPlayerStatus.Playing) {
                 return message.channel.send('The music is not playing!');
             }

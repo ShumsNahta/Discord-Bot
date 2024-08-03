@@ -9,13 +9,13 @@ module.exports = {
             .setCustomId('sub-menu')
             .setMinValues(1)
             .setMaxValues(1)
-            .setPlaceholder("Select, buddy!")
+            .setPlaceholder("Select the project you want to visit buddy!")
             .addOptions(
                 new StringSelectMenuOptionBuilder()
-                    .setLabel('Option #1')
+                    .setLabel('Bank Management System')
                     .setValue('https://github.com/ShumsNahta/bank-management-system'),
                 new StringSelectMenuOptionBuilder()
-                    .setLabel('Option #2')
+                    .setLabel('NumberUno')
                     .setValue('https://github.com/ShumsNahta/NumberUno')
             );
 
